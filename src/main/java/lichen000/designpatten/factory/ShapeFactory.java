@@ -20,5 +20,22 @@ public class ShapeFactory {
         }
         return null;
     }
+
+    /**
+     *
+     * @param clazz
+     * @return
+     */
+    public static Object getShape2(Class<? extends Shape> clazz) {
+        Object obj = null;
+
+        try {
+            obj = Class.forName(clazz.getName()).newInstance();
+        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+            e.printStackTrace();
+        }
+
+        return obj;
+    }
 }
 
