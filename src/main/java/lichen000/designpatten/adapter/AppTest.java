@@ -1,25 +1,20 @@
 package lichen000.designpatten.adapter;
 
-import lichen000.designpatten.builder.Meal;
-import lichen000.designpatten.builder.MealBuilder;
 
 public class AppTest {
 
     public static void main(String[] args) {
 
-		MealBuilder mealBuilder = new MealBuilder();
+		AudioPlayer audioPlayer = new AudioPlayer();
 
-		Meal vegMeal = mealBuilder.prepareVegMeal();
-		System.out.println("Veg Meal");
-		vegMeal.printItems();
-		System.out.println("Total Cost: " +vegMeal.getCost());
+		audioPlayer.play("mp3", "111.mp3");
 
-		System.out.println("\r\n");
+		audioPlayer.play("mp4", "222.mp4");
 
-		Meal nonVegMeal = mealBuilder.prepareNonVegMeal();
-		System.out.println("Non-Veg Meal");
-		nonVegMeal.printItems();
-		System.out.println("Total Cost: " +nonVegMeal.getCost());
+		audioPlayer.play("vlc", "333.vlc");
+
+		audioPlayer.play("avi", "444.avi");
+
 
 	}
 
