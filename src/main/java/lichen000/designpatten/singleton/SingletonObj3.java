@@ -7,7 +7,7 @@ package lichen000.designpatten.singleton;
 public class SingletonObj3 {
 
 	//创建 SingletonObj 的一个对象
-	private static SingletonObj3 instance = new SingletonObj3();
+	private static final SingletonObj3 instance = new SingletonObj3();
 
 	//让构造函数为 private，这样该类就不会被实例化
 	private SingletonObj3(){
